@@ -1,0 +1,124 @@
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  drawBrazilBackground();
+  drawStripes();
+  drawBlueBox();
+  drawBrazilDiamond();
+  drawBrazilCircle();
+
+  // drawBrazilFlag();
+  // drawUSAFlag();
+}
+
+function drawBrazilFlag() {
+  drawBrazilBackground();
+  drawBrazilDiamond();
+  drawBrazilCircle();
+  drawBrazilArc();
+}
+
+function drawUSAFlag() {
+  drawBackground();
+  drawStripes();
+  drawBlueBox();
+  drawStars();
+}
+
+//Brazil Flag
+
+function drawBrazilBackground() {
+  noStroke();
+  fill("#019C37");
+  rect(0, 0, 600, 400);
+}
+
+function drawBrazilDiamond() {
+  noStroke();
+  fill("#FEE000");
+  beginShape();
+  vertex(50, 200);
+  vertex(300, 50);
+  vertex(550, 200);
+  vertex(300, 350);
+  endShape(CLOSE);
+}
+
+function drawBrazilCircle() {
+  noStroke();
+  fill("#012671");
+  ellipse(300, 200, 200);
+}
+
+function drawBrazilArc() {
+  stroke(255);
+  strokeWeight(10);
+  noFill();
+  ellipse(275, 325, 350);
+  //covering up the parts of the circle we don't wanna see
+  noStroke();
+  fill("#FEE000");
+  //right
+  beginShape();
+  vertex(400, 175);
+  vertex(400, 290);
+  vertex(450, 260);
+  vertex(450, 150);
+  endShape(CLOSE);
+  //left
+  beginShape();
+  vertex(100, 175);
+  vertex(100, 230);
+  vertex(175, 275);
+  vertex(211, 150);
+  endShape(CLOSE);
+
+  fill("#019C37");
+  //left
+  beginShape();
+  vertex(100, 230);
+  vertex(175, 275);
+  vertex(200, 400);
+  vertex(50, 400);
+  endShape(CLOSE);
+  //right
+  fill("#019C37");
+  beginShape();
+  vertex(500, 230);
+  vertex(425, 275);
+  vertex(300, 400);
+  vertex(600, 400);
+  endShape(CLOSE);
+}
+
+//USA Flag
+
+function drawBackground() {
+  noStroke();
+  fill("white");
+  rect(0, 0, 600, 400);
+}
+
+function drawStripes() {
+  stripe(250, (400 / 13) * 0, 350, 400 / 13);
+  stripe(250, (400 / 13) * 2, 350, 400 / 13);
+  stripe(250, (400 / 13) * 4, 350, 400 / 13);
+  stripe(250, (400 / 13) * 6, 350, 400 / 13);
+  stripe(0, (400 / 13) * 8, 600, 400 / 13);
+  stripe(0, (400 / 13) * 10, 600, 400 / 13);
+  stripe(0, (400 / 13) * 12, 600, 400 / 13);
+
+  function stripe(x, y, stripeWidth, stripeHeight) {
+    noStroke();
+    fill("#B22234");
+    rect(x, y, stripeWidth, stripeHeight);
+  }
+}
+function drawBlueBox() {
+  noStroke();
+  fill("#3C3B6E");
+  rect(0, 0, 250, (400 / 13) * 7);
+}
+function drawStars() {}
