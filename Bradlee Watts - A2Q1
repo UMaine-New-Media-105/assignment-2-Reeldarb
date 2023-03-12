@@ -1,0 +1,113 @@
+let boxSize = 80;
+let boxXdistance = 80;
+let boxYdistance = 80;
+
+//vertical gradient
+let saturation = 255 / 10;
+//diagonal gradient
+let b = 255 / 9;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(0);
+  noStroke();
+
+  firstRow();
+  secondRow();
+  thirdRow();
+  fourthRow();
+  fifthRow();
+}
+
+function firstRow() {
+  //square (1,1)
+  fill(255, 0, 0, saturation);
+  rect(boxXdistance - 80, 0, boxSize);
+  //square (2,1)
+  fill(0, 255, 0, b * 4);
+  rect(boxXdistance, 0, boxSize);
+  //square (3,1)
+  fill(0, 255, 0, b * 3);
+  rect(boxXdistance * 2, 0, boxSize);
+  //square (4,1)
+  fill(255, 0, 0, saturation);
+  rect(boxXdistance * 3, 0, boxSize);
+  //square (5,1)
+  fill(255, 0, 0, saturation);
+  rect(boxXdistance * 4, 0, boxSize);
+}
+
+function secondRow() {
+  //square (1,2)
+  fill(255, 0, 0, saturation * 2);
+  rect(boxXdistance - 80, boxYdistance, boxSize);
+  //square (2,2)
+  fill(0, 255, 0, b * 5);
+  rect(boxXdistance, boxYdistance, boxSize);
+  //square (3,2)
+  fill(255, 0, 0, saturation * 2);
+  rect(boxXdistance * 2, boxYdistance, boxSize);
+  //square (4,2)
+  fill(0, 255, 0, b * 3);
+  rect(boxXdistance * 3, boxYdistance, boxSize);
+  //square (5,2)
+  fill(255, 0, 0, saturation * 2);
+  rect(boxXdistance * 4, boxYdistance, boxSize);
+}
+
+function thirdRow() {
+  //square (1,3)
+  fill(255, 0, 0, saturation * 3);
+  rect(boxXdistance - 80, boxYdistance * 2, boxSize);
+  //square (2,3)
+  fill(0, 255, 0, b * 6);
+  rect(boxXdistance, boxYdistance * 2, boxSize);
+  //square (3,3)
+  fill(0, 255, 0, b * 5);
+  rect(boxXdistance * 2, boxYdistance * 2, boxSize);
+  //square (4,3)
+  fill(255, 0, 0, saturation * 3);
+  rect(boxXdistance * 3, boxYdistance * 2, boxSize);
+  //square (5,3)
+  fill(255, 0, 0, saturation * 3);
+  rect(boxXdistance * 4, boxYdistance * 2, boxSize);
+}
+
+function fourthRow() {
+  //square (1,4)
+  fill(255, 0, 0, saturation * 4);
+  rect(boxXdistance - 80, boxYdistance * 3, boxSize);
+  //square (2,4)
+  fill(0, 255, 0, b * 7);
+  rect(boxXdistance, boxYdistance * 3, boxSize);
+  //square (3,4)
+  fill(255, 0, 0, saturation * 4);
+  rect(boxXdistance * 2, boxYdistance * 3, boxSize);
+  //square (4,4)
+  fill(0, 255, 0, b * 5);
+  rect(boxXdistance * 3, boxYdistance * 3, boxSize);
+  //square (5,4)
+  fill(255, 0, 0, saturation * 4);
+  rect(boxXdistance * 4, boxYdistance * 3, boxSize);
+}
+
+function fifthRow() {
+  //square (1,5)
+  fill(255, 0, 0, saturation * 5);
+  rect(boxXdistance - 80, boxYdistance * 4, boxSize);
+  //square (2,5)
+  fill(0, 255, 0, b * 8);
+  rect(boxXdistance, boxYdistance * 4, boxSize);
+  //square (3,5)
+  fill(0, 255, 0, b * 7);
+  rect(boxXdistance * 2, boxYdistance * 4, boxSize);
+  //square (4,5)
+  fill(255, 0, 0, saturation * 5);
+  rect(boxXdistance * 3, boxYdistance * 4, boxSize);
+  //square (5,5)
+  fill(255, 0, 0, saturation * 5);
+  rect(boxXdistance * 4, boxYdistance * 4, boxSize);
+}
