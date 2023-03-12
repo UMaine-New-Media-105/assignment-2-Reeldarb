@@ -1,0 +1,27 @@
+function setup() {
+  createCanvas(400, 400);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background("white");
+  stopSign();
+}
+
+function stopSign() {
+  push();
+  noFill();
+  strokeWeight(2);
+  fill("red");
+  beginShape();
+  vertex(150, 80);
+  vertex(250, 80);
+  vertex(320.71, 150.71);
+  vertex(320.71, 250.71);
+  vertex(250, 321.42);
+  vertex(150, 321.42);
+  vertex(79.29, 250.71);
+  vertex(79.29, 150.71);
+  endShape(CLOSE);
+  pop();
+}
